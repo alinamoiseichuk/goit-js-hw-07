@@ -1,5 +1,5 @@
 const input = document.querySelector("input");
-const btnGreate = document.querySelector("button[data-create]");
+const btnCreate = document.querySelector("button[data-create]");
 const btnDestroy = document.querySelector("button[data-destroy]");
 const box = document.querySelector("#boxes");
 
@@ -22,10 +22,10 @@ function destroyBoxes() {
   box.innerHTML = "";
 }
 
-btnGreate.addEventListener("click", handleBtnGreate);
-function handleBtnGreate() {
+btnCreate.addEventListener("click", handleBtnCreate);
+function handleBtnCreate() {
   const numberInput = Number(input.value);
-  if (numberInput >= 1 || numberInput <= 100) {
+  if (numberInput >= 1 && numberInput <= 100) {
     createBoxes(numberInput);
   }
 }
